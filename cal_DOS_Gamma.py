@@ -10,11 +10,11 @@ def makeDirectory(path):
 
 makeDirectory('results')
 
-T=300
-nRun = 9
-n_bins = 10000
-omega_min = -100
-omega_max = 800
+T=0.5    # Temperature
+nRun = 3  # Number of sample
+n_bins = 100
+omega_min = -20
+omega_max = 100
 binsize = (omega_max-omega_min)/n_bins
 
 def calculateDOS_gamma(eigenvalues, gamma):
@@ -43,16 +43,16 @@ dos[:,0] = np.linspace(omega_min, omega_max, n_bins)
 gammaCG = np.zeros((n_bins,2))
 gammaCG[:,0] = np.linspace(omega_min, omega_max, n_bins)
 
-for r in range(4,nRun):
-        data = np.genfromtxt('../T'+str(T)+'/runs/run'+str(r)+'/G_T'+str(T)+'.data')
-        eigenvalues = data[:,2]
+for r in range(nRun):
+        data = np.genfromtxt('./run'+str(r)+'/G_T'+str(T)+'0.data') # read file for eigen values and force field
+        eigenvalues = data[:,0]
         gamma = data[:,1]
         temp1, temp2 = calculateDOS_gamma(eigenvalues, gamma)
         dos[:,1] += temp1
         gammaCG[:,1] += temp2
 
 
-dos[:,1] /= (nRun-4)
-gammaCG[:,1] /= (nRun-4)
+dos[:,1] /= (nRun)
+gammaCG[:,1] /= (nRun)
 np.savetxt('DOS_ave.txt',dos)
 np.savetxt('gamma_ave.txt',gammaCG)
