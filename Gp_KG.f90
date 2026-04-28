@@ -1,19 +1,19 @@
 Program G
 implicit none
-  integer, parameter :: n = 3*5000
+  integer, parameter :: n = 3*5000 ! N=5000 Number of monomer
   integer, parameter :: m = 3*5000
-  real(8), parameter :: T = 0.5d0
+  real(8), parameter :: T = 0.5d0  ! Temperature
   real(8), dimension(m) :: v, rk
   real(8), dimension(m) :: swp,wp, omega, ReK, ImK
   real(8), dimension(m) :: gamma
   integer i, j, k, l, p, tej
-  real(8) :: sum,  constant, f, w, nu
+  real(8) :: sum,  constant, f, w, nu  ! w external frequency  
   CHARACTER(50) F1,F2,F3,F4,F5,F6
-  real(8), parameter :: G_A = 81   ! Depends on temperature
+  real(8), parameter :: G_A = 81  ! Affine modulus ! Depends on temperature
   real(8), parameter :: W_c = 1    ! Depends on temperature
 
 rk=0
-   do tej=0,2
+   do tej=0,2 !trejectories started 0 to 2 runs
 
 write(F1,'(a,I1,a)')'run',tej,'/volume.dat'
 open(unit=9,file=F1,status="old")
@@ -30,8 +30,8 @@ end do
 
 
 do i=1,m
-read(10,*) swp(i)
-read(111,*) gamma(i)
+read(10,*) swp(i)     ! eigen frequency term 
+read(111,*) gamma(i)  ! Affine force field correlator
 end do
 
 !++++++++++++++++++++++++++++
@@ -47,22 +47,22 @@ end do
 do p=1,215
 w=exp(-15+0.1d0*p)
 
-nu=1.d0
-constant=1.0*v(1)**(-1)
+nu=1.d0        ! friction kernal
+constant=1.0*v(1)**(-1) ! volume coefficient
 
 sum=0.d0
 do i=1,m
-if(abs(swp(i)).lt.+0.00001d0) then
+if(abs(swp(i)).lt.+0.00001d0) then   ! discated translational modes (Goldstone modes)
 gamma(i)=0.d0
 elseif((swp(i)).gt.-W_c.and.(swp(i)).lt.+W_c) then 
-gamma(i)=47.d0*abs(swp(i))
+gamma(i)=47.d0*abs(swp(i))  ! Gamma fit belwo cutoff frequency
 else
 gamma(i)=gamma(i)
 endif
-f=-(swp(i)-w*w)*gamma(i)*((swp(i)-w*w)**(+2) + nu*nu*w*w)**(-1)
+f=-(swp(i)-w*w)*gamma(i)*((swp(i)-w*w)**(+2) + nu*nu*w*w)**(-1) !Integration perform in term of sum
 sum=sum+f
 end do
-write(13,*)w, sum*constant + G_A
+write(13,*) w, (sum*constant + G_A) !modulus results as a function of external frequency
 
 end do
 
