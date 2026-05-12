@@ -179,7 +179,7 @@ where:
 - g(\omega) is the vibrational density of states
 - \Gamma(\omega) is the affine force-field correlator
 
-For finite-temperature liquid configurations, the Hessian matrix may contain both positive and negative eigenvalues. These correspond to real and imaginary instantaneous normal modes. Both branches can contribute to the viscosity and should be included in the integration where appropriate.
+For finite-temperature liquid configurations, the Hessian matrix may contain both positive and negative eigenvalues. These correspond to real and imaginary instantaneous normal modes. Both branches can contribute to the viscosity and should be included in the integration where appropriate. Of course the above integral, in the NALD codes, is computed in discretized form. 
 
 This method is particularly useful near the glass transition, where conventional Green–Kubo calculations become computationally expensive due to the slow decay of stress autocorrelation functions.
 
