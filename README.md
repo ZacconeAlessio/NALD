@@ -172,12 +172,12 @@ d\omega
 
 where:
 
-- \(N\) is the number of particles
-- \(V\) is the system volume
-- \(m\) is the particle mass
-- \(\nu(0)\) is the zero-frequency friction coefficient
-- \(g(\omega)\) is the vibrational density of states
-- \(\Gamma(\omega)\) is the affine force-field correlator
+- N is the number of particles
+- V is the system volume
+- m is the particle mass
+- \nu(0) is the zero-frequency friction coefficient
+- g(\omega) is the vibrational density of states
+- \Gamma(\omega) is the affine force-field correlator
 
 For finite-temperature liquid configurations, the Hessian matrix may contain both positive and negative eigenvalues. These correspond to real and imaginary instantaneous normal modes. Both branches can contribute to the viscosity and should be included in the integration where appropriate.
 
