@@ -230,8 +230,9 @@ Italy
 If you use this code in your research, please cite:
 
 1. V. V. Palyulin, C. Ness, R. Milkus, R. M. Elder, T. W. Sirk, and A. Zaccone,  
-   *Soft Matter* **14**, 8475 (2018).  
-   DOI: https://doi.org/10.1039/C8SM01384G
+   *Parameter-free predictions of the viscoelastic response of glassy polymers from non-affine lattice dynamics*,  
+   *Soft Matter* **14**, 8475–8482 (2018).  
+   DOI: https://doi.org/10.1039/C8SM01468J
 
 2. A. Singh, V. Vaibhav, T. W. Sirk, and A. Zaccone,  
    *Viscosity of polymer melts using non-affine theory based on vibrational modes*,  
