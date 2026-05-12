@@ -149,6 +149,45 @@ directly within the Python and Fortran scripts.
 
 ---
 
+## Viscosity of Liquids
+
+In addition to computing the frequency-dependent storage and loss moduli, the NALD framework can also be used to estimate the zero-frequency shear viscosity of liquids and supercooled liquids.
+
+This approach is based on instantaneous normal mode analysis and non-affine response theory. Instead of integrating long-time stress autocorrelation functions, as in the Green–Kubo method, the viscosity is obtained from the zero-frequency limit of the loss modulus:
+
+```math
+\eta = \lim_{\Omega \to 0} \frac{G''(\Omega)}{\Omega}
+```
+
+Within the NALD framework, this gives:
+
+```math
+\eta =
+\frac{N \nu(0)}{V}
+\int
+\frac{\Gamma(\omega) g(\omega)}
+{m^2 \omega^4}
+d\omega
+```
+
+where:
+
+- \(N\) is the number of particles
+- \(V\) is the system volume
+- \(m\) is the particle mass
+- \(\nu(0)\) is the zero-frequency friction coefficient
+- \(g(\omega)\) is the vibrational density of states
+- \(\Gamma(\omega)\) is the affine force-field correlator
+
+For finite-temperature liquid configurations, the Hessian matrix may contain both positive and negative eigenvalues. These correspond to real and imaginary instantaneous normal modes. Both branches can contribute to the viscosity and should be included in the integration where appropriate.
+
+This method is particularly useful near the glass transition, where conventional Green–Kubo calculations become computationally expensive due to the slow decay of stress autocorrelation functions.
+
+The viscosity calculation follows the methodology described in:
+
+A. Singh, V. Vaibhav, T. W. Sirk, and A. Zaccone,  
+*Viscosity of polymer melts using non-affine theory based on vibrational modes*,  
+*The Journal of Chemical Physics* **162**, 244504 (2025).
 ## Applications
 
 This package can be used for:
