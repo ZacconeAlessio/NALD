@@ -196,11 +196,16 @@ For finite-temperature liquid configurations, the Hessian matrix may contain bot
 
 This method is particularly useful near the glass transition, where conventional Green–Kubo calculations become computationally expensive due to the slow decay of stress autocorrelation functions.
 
-The viscosity calculation follows the methodology described in:
+The viscosity calculation follows the methodology described in the following papers:
 
 A. Singh, V. Vaibhav, T. W. Sirk, and A. Zaccone,  
 *Viscosity of polymer melts using non-affine theory based on vibrational modes*,  
 *The Journal of Chemical Physics* **162**, 244504 (2025).
+
+A. Zaccone,  
+*General theory of the viscosity of liquids and solids from nonaffine particle motions*,  
+*Physical Review E* **108**, 044101 (2023).  
+
 ## Applications
 
 This package can be used for:
@@ -225,11 +230,19 @@ Italy
 If you use this code in your research, please cite:
 
 1. V. V. Palyulin, C. Ness, R. Milkus, R. M. Elder, T. W. Sirk, and A. Zaccone,  
-   *Soft Matter* **14**, 8475 (2018).
+   *Soft Matter* **14**, 8475 (2018).  
+   DOI: https://doi.org/10.1039/C8SM01384G
 
 2. A. Singh, V. Vaibhav, T. W. Sirk, and A. Zaccone,  
-   *The Journal of Chemical Physics* **162** (2025).
+   *Viscosity of polymer melts using non-affine theory based on vibrational modes*,  
+   *The Journal of Chemical Physics* **162**, 244504 (2025).  
+   DOI: https://doi.org/10.1063/5.0272171
 
+3. A. Zaccone,  
+   *General theory of the viscosity of liquids and solids from nonaffine particle motions*,  
+   *Physical Review E* **108**, 044101 (2023).  
+   DOI: https://doi.org/10.1103/PhysRevE.108.044101
+   
 ---
 
 ## License
