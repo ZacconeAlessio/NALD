@@ -38,6 +38,13 @@ Use the LAMMPS input script:
 in.KG_cool_Hessian
 ```
 
+Run:
+
+```bash
+mpirun -np 12 lmp_mpi -in in.KG_cool_Hessian
+```
+
+
 to generate the Hessian matrix of the equilibrated configuration.
 
 ### Step 3 — Generate the affine force field
@@ -46,6 +53,12 @@ Use the LAMMPS input script:
 
 ```bash
 in.KG_cool_affine
+```
+
+Run:
+
+```bash
+mpirun -np 12 lmp_mpi -in in.KG_cool_affine
 ```
 
 to compute the affine force-field vectors.
