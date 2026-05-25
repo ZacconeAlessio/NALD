@@ -219,7 +219,8 @@ This package can be used for:
 
 ## Developed By
 
-**Zaccone Group**  (Ankit Singh, Vinay Vaibhav, Tim W. Sirk, Alessio Zaccone)
+**Zaccone Group**  
+(Ankit Singh, Vinay Vaibhav, Tim W. Sirk, Alessio Zaccone)
 University of Milan  
 Italy
 
