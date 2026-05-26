@@ -14,7 +14,7 @@ The calculation of the viscoelastic modulus within the NALD framework requires t
 - Affine force-field correlator
 - Friction kernel
 
-Starting from an equilibrated polymer melt or atomistic configuration at a given temperature, the workflow proceeds through Hessian matrix construction, eigenmode analysis, DOS evaluation, and finally the computation of the storage modulus $G'(\omega)$ and loss modulus $G''(\omega)$.
+Starting from an equilibrated polymer melt or atomistic configuration at a given temperature, the workflow proceeds through Hessian matrix construction, eigenmode analysis, DOS evaluation, and finally the computation of the storage modulus $G'(\Omega)$ and loss modulus $G''(\Omega)$, where $\Omega$ is the externally applied deformation frequency.
 
 The same methodology can also be applied to atomistic systems representing experimentally relevant materials.
 
@@ -73,7 +73,7 @@ python diagonalization.py
 
 This script computes:
 
-- Eigenvalues
+- Eigenvalues (related to the internal eigenfrequencies $\omega)
 - Eigenvectors
 - Mode-resolved quantities required for NALD calculations
 
@@ -108,8 +108,8 @@ Run:
 
 These programs compute:
 
-- Storage modulus \(G'(\omega)\)
-- Loss modulus \(G''(\omega)\)
+- Storage modulus $G'(\Omega)$
+- Loss modulus $G''(\Omega)$
 
 over a range of externally applied frequencies.
 
@@ -189,8 +189,8 @@ where:
 - V is the system volume
 - m is the particle mass
 - $\nu(0)$ is the zero-frequency friction coefficient
-- g(\omega) is the vibrational density of states
-- \Gamma(\omega) is the affine force-field correlator
+- $g(\omega)$ is the vibrational density of states
+- $\Gamma(\omega)$ is the affine force-field correlator
 
 For finite-temperature liquid configurations, the Hessian matrix may contain both positive and negative eigenvalues. These correspond to real and imaginary instantaneous normal modes. Both branches can contribute to the viscosity and should be included in the integration where appropriate. Of course the above integral, in the NALD codes, is computed in discretized form. 
 
