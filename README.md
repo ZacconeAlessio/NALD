@@ -188,7 +188,7 @@ where:
 - N is the number of particles
 - V is the system volume
 - m is the particle mass
-- \nu(0) is the zero-frequency friction coefficient
+- $\nu(0)$ is the zero-frequency friction coefficient
 - g(\omega) is the vibrational density of states
 - \Gamma(\omega) is the affine force-field correlator
 
