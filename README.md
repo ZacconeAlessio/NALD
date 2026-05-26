@@ -14,7 +14,7 @@ The calculation of the viscoelastic modulus within the NALD framework requires t
 - Affine force-field correlator
 - Friction kernel
 
-Starting from an equilibrated polymer melt or atomistic configuration at a given temperature, the workflow proceeds through Hessian matrix construction, eigenmode analysis, DOS evaluation, and finally the computation of the storage modulus G'(\omega) and loss modulus G''(\omega).
+Starting from an equilibrated polymer melt or atomistic configuration at a given temperature, the workflow proceeds through Hessian matrix construction, eigenmode analysis, DOS evaluation, and finally the computation of the storage modulus $G'(\omega)$ and loss modulus $G''(\omega)$.
 
 The same methodology can also be applied to atomistic systems representing experimentally relevant materials.
 
